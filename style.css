@@ -1,0 +1,183 @@
+/* Reset global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #eaeaea; /* fundo externo */
+    color: #333;
+    line-height: 1.6;
+    border: 8px solid #fff; /* borda em volta do site */
+}
+
+/* ===================== HEADER ===================== */
+header {
+    background-color: #002E5D;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header .logo {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ECBB00;
+}
+
+/* ===================== HERO ===================== */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background-image: url("Imagens/59239777-aberto-eletrico-gabinete-mostrando-complexo-fiacao-e-componentes-iluminado-de-caloroso-luz-foto.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    max-width: 90%;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* ===================== BOTÕES CTA ===================== */
+.button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 10px 5px;
+    padding: 12px 24px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s ease-in-out;
+    color: #fff;
+}
+
+.button.instagram { background: #E1306C; }
+.button.instagram:hover { background: #c42b60; }
+
+.button.whatsapp { background: #25D366; }
+.button.whatsapp:hover { background: #1ebe5d; }
+
+/* ===================== SEÇÕES ===================== */
+section {
+    padding: 60px 10%;
+}
+
+#sobre { background-color: #ffffff; }              /* Branco */
+#servicos { background-color: #f4f4f4; }          /* Cinza claro */
+#diferenciais { background-color: #e9f0f7; }      /* Azul bem suave */
+#contato { background-color: #fef9e7; }           /* Amarelado claro */
+
+h2 {
+    color: #002E5D;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* ===================== GRID ===================== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #002E5D;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+/* ===================== RODAPÉ ===================== */
+footer {
+    background: #002E5D;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+/* ===================== RESPONSIVIDADE ===================== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav {
+        margin-top: 10px;
+    }
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    .hero-text p {
+        font-size: 1rem;
+    }
+}
