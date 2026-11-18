@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://frautomacao.com.br/sitemap.xml
